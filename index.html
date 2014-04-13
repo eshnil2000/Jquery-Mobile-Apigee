@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title> HomeHelp</title>
+		<script src="jquery.min.js"></script>
+		<script src="jquery-1.5.2.min.js"></script>
+		<script src="jquery.mobile-1.0a4.1.min.js"></script>
+		<script src="jqmdocs.css"></script>
+		<script src="jquery.mobile-1.1.1.min.css"></script>
+
+		<link rel="stylesheet" href="jquery.mobile-1.0a4.1.min.css" />
+		<script  type="text/javascript">
+			$('#suggestions2 li').live('click', function() {
+    alert("Works"); // id of clicked li by directly accessing DOMElement property
+});
+
+      GobenchMark=function () {
+      $.mobile.changePage( "#pageBenchMark");
+    }
+
+			GoPageChat=function () {
+			$.mobile.changePage( "#pageChat");
+      $("#messageText").val("Nik requesting HW help from Randy ");
+		}
+
+			GoPageWishList=function () {
+			$.mobile.changePage( "#pageWishList");
+
+		}
+			GoApproveAll= function(){
+			$('input[type=checkbox]').trigger('click'); 
+			$("input[type='checkbox']").attr("checked",true).checkboxradio("refresh"); 
+			}
+
+			GoPageChoreList=function () {
+			$.mobile.changePage( "#pageChoreList");
+		}
+			GoApproval=function () {
+			$.mobile.changePage( "#pageApproval");
+		}
+		</script>
+	</head>
+
+<body>
+
+<div id="pageBank" data-role="page" data-add-back-btn="true" >
+<div data-role="header"> 
+	<h1>My Kids</h1>
+	<style>
+	#img {
+    position:absolute;
+    top:0;
+    bottom:0;
+    left: 1000;
+    margin:auto;
+}
+</style>
+
+</div> 
+
+           <!--iframe id="player" type="text/html" width="640" height="390"
+  src="http://www.youtube.com/embed/u1zgFlCw8Aw?enablejsapi=1&origin=http://example.com"
+  frameborder="0"></iframe-->
+    
+
+        <ul data-role="listview" data-inset="true"id="#suggestions2"   >
+					<li  >
+						<a onclick="GoApproval()"	>
+						<div style="display:inline-block">
+						<img src="kid1.png" />
+						</div>
+						<div style="display:inline-block">
+							<h2>John</h2>
+						<p>$50</p>
+						</div>
+						<!--div style="display:inline-block">
+							<img src="blink.png" id="img" />
+						</div-->
+
+						</a><a onclick="GoPageChoreList()"></a>
+					</li>
+					<li><a href="#">
+						<div style="display:inline-block">
+						<img src="girl2.jpeg" />
+						</div>
+						<div style="display:inline-block">
+						<h2>Mary</h2>
+						<p>$100</p>
+						</div>
+						</a><a onclick="GoPageChoreList()"></a>
+					</li>
+
+          
+          <li data-theme="a" data-role="list-divider">Frank's Kids </li>
+
+          
+
+          <li  >
+            <a onclick="GoPageChoreList()" >
+            <div style="display:inline-block">
+            <img src="kid1.png" />
+            </div>
+            <div style="display:inline-block">
+              <h2>Randy</h2>
+            <p>Next Available slot Tue 2:40pm Homework Help</p>
+            </div>
+            <!--div style="display:inline-block">
+              <img src="blink.png" id="img" />
+            </div-->
+
+            </a><a onclick="GoPageChoreList()"></a>
+          </li>
+          <li><a href="#">
+            <div style="display:inline-block">
+            <img src="girl2.jpeg" />
+            </div>
+            <div style="display:inline-block">
+            <h2>Ryan</h2>
+            <p>Not Available this week Mow the Lawn</p>
+            </div>
+            </a><a onclick="GoPageChoreList()"></a>
+          </li>
+
+                    <li data-theme="a" data-role="list-divider">Lisa's Kids </li>
+
+          
+
+          <li  >
+            <a onclick="GoPageChoreList()" >
+            <div style="display:inline-block">
+            <img src="kid1.png" />
+            </div>
+            <div style="display:inline-block">
+              <h2>Elle</h2>
+            <p>Not Available</p>
+            </div>
+            <!--div style="display:inline-block">
+              <img src="blink.png" id="img" />
+            </div-->
+
+            </a><a onclick="GoPageChoreList()"></a>
+          </li>
+          <li><a href="#">
+            <div style="display:inline-block">
+            <img src="girl2.jpeg" />
+            </div>
+            <div style="display:inline-block">
+            <h2>Rich</h2>
+            <p>Next Available 11/29 @ 8am</p>
+            </div>
+            </a><a onclick="GoPageChoreList()"></a>
+          </li>
+
+				</ul>
+
+<a href="#pageChoreList" data-role="button" data-mini="true"  data-inline="true" data-icon="home" rel="external" > See Chore List</a>
+
+<div data-role="footer"> 
+  <h4>HomeWorks</h4> 
+</div> 
+</div>
+
+<div id="pageChoreList" data-role="page" data-add-back-btn="true" >
+<div data-role="header"> 
+	<h1>Approved Chores</h1> 
+</div> 
+				<ul data-role="listview" data-inset="true"id="#suggestions1"   data-filter="true" data-filter-reveal="false" data-filter-placeholder="Questions" data-rel="back">
+					<li><a onclick="GoPageChat()">
+						<img src="laundry.png" />
+						<h2>Laundry</h2>
+						<p>100 pts</p></a>
+					</li>
+					<li><a onclick="GoPageChat()">
+						<img src="homework.png" />
+						<h2>HomeWork</h2>
+						<p>100 pts</p></a>
+					</li>
+					<li><a onclick="GoPageChat()">
+						<img src="food.png" />
+						<h2>Food</h2>
+						<p>50pts</p></a>
+					</li>
+          <li><a onclick="GoPageChat()">
+            <img src="toilet.png" />
+            <h2>bathroom</h2>
+            <p>300 pts</p></a>
+          </li>
+          <li><a onclick="GoPageChat()">
+            <img src="yard.png" />
+            <h2>Yard</h2>
+            <p>250 pts</p></a>
+          </li>
+          <li><a onclick="GoPageChat()">
+            <img src="mow.png" />
+            <h2>Lawn</h2>
+            <p>100pts</p></a>
+          </li>
+				</ul>
+
+				<a href="#pageAddChore" data-role="button" data-mini="true"  data-inline="true" data-icon="plus" rel="external" > Request New Chore</a>
+
+				
+			
+      <div data-role="footer"> 
+      <h4>HomeWorks</h4> 
+      </div> 
+</div>
+
+<div id="pageApproval" data-role="page" data-add-back-btn="true" data-role="header"> 
+ <div data-role="header"> 
+  <h1>Confirm Task Completion</h1> 
+</div> 
+<!-- AddThis Smart Layers BEGIN -->
+<!-- Go to http://www.addthis.com/get/smart-layers to customize -->
+<head>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5205894e1544c811"></script>
+<script type="text/javascript">
+  addthis.layers({
+    'theme' : 'transparent',
+    'share' : {
+      'position' : 'right',
+      'numPreferredServices' : 3
+    },  
+    'whatsnext' : {},  
+    'recommended' : {} 
+  });
+</script>
+<!-- AddThis Smart Layers END -->
+</head>
+				
+				<div  data-role="fieldcontain" id="checkbox_approve">
+			 	<fieldset data-role="controlgroup" >
+					
+					<input type="checkbox" name="checkbox-1a" id="checkbox-1a" class="custom" data-theme="e" />
+					<label for="checkbox-1a">Laundry - Done 2pm,John exceeded $15 monthly allowance,requesting unlock 30min extra screen time</label>
+
+					<input data-icon="exclamation" type="checkbox" name="checkbox-2a" id="checkbox-2a" class="custom" />
+					<label for="checkbox-2a">Homework- completed Algebra Chapter 4 (Glencoe.edu)</label>
+					
+					<input type="checkbox" name="checkbox-3a" id="checkbox-3a" class="custom" />
+					<label for="checkbox-3a">Dishes- pending</label>
+
+					<input type="checkbox" name="checkbox-4a" id="checkbox-4a" class="custom" />
+					<label for="checkbox-4a">Trash - pending</label>
+			    </fieldset>
+
+
+			</div>
+
+				<a href="#" data-role="button" data-mini="true"  data-inline="true" data-icon="check" rel="external" onClick="GoApproveAll()" > Approve All</a>
+
+				<a href="#pageEditChore" data-role="button" data-mini="true"  data-inline="true" rel="external" onClick="GoPageChat()"> Verify</a>
+
+				<a href="#pageEditChore" data-role="button" data-mini="true"  data-inline="true" rel="external" onClick="GoPageWishList()"> Review John's Wish List</a>
+
+
+			      <div data-role="footer"> 
+              <h4>HomeWorks</h4> 
+            </div> 
+</div>
+
+<div id="pageWishList" data-role="page" data-add-back-btn="true" >
+<div data-role="header"> 
+	<h1>John's Wish List</h1> 
+	<meta name="viewport" content = "width = device-width, initial-scale = 1.0, minimum-scale = 1.0, maximum-scale = 1.0, user-scalable = no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <style type="text/css">
+        body { margin: 5px 10px;padding: 0; font-family:courier new; font-size:12px; }
+        
+        .frame-border {
+          padding: 20px;
+        }
+        
+        .device-selector {
+          text-align:center;
+        }
+        
+        .device-selector a {
+          background: url(device-sprite.png) no-repeat top left;
+          width: 48px; height: 48px;
+          margin:0 10px;
+          display:inline-block;
+          border:solid 5px transparent;
+          border-radius:3px;
+        }
+        
+          .device-selector a.tablet{ background-position: 0 0; } 
+          .device-selector a.tablet-landscape{ background-position: -96px 0; } 
+          .device-selector a.mobile{ background-position: -192px 0; } 
+          .device-selector a.mobile-landscape{ background-position: -288px 0; } 
+          .device-selector a.desktop{ background-position: -384px 0; }
+
+            .device-selector a:hover {
+              background-color:#eee;
+            }
+          
+            .device-selector a.chosen {
+              background-color:#ddd;
+            }
+            
+        .demo-selector {
+          text-align:center;
+        }
+        
+          .demo-selector p {
+            display:inline-block;
+          }
+          
+          .demo-selector a {
+            text-decoration:none;
+            color:#00f;
+          }
+          
+            .demo-selector a.chosen {
+              text-decoration:underline;
+              font-weight:bold;
+              color:#f00;
+            }
+            
+          .demo-selector .demo-desc {
+            font-size:18px;
+            font-family:arial;
+          }
+            
+        #demo-frame {
+          border: solid 3px #ddd;
+          width: 1024px;
+          height: 600px;
+          margin-left:50%;
+          position:fixed;
+          left:-512px;
+          border-radius:5px;
+        }
+        
+    </style>    
+
+     <script type="text/javascript">
+     
+    $("#toggle").click(function(){ 
+   $("img").attr('src',  
+                ($("img").attr('src') == "active.png"  
+                    ? "disabled.png"  
+                    : "active.png" 
+                     ) 
+                )  
+    }); 
+ 
+
+      $(function () {
+    		$('.device-selector > a').click(function(e) {
+    			e.preventDefault();
+          var $this = $(this);
+          $this.addClass('chosen').siblings('a').removeClass('chosen');
+    			var width = $this.data('width');
+          var left = (parseInt(width) / 2) * -1;
+    			var height = $this.data('height');
+    			$('#demo-frame').animate({ 'width': width, 'left' : left });
+    		});
+        
+        $('.demo-selector > a').click(function(e) {
+          e.preventDefault();
+          var $this = $(this);
+          $this.addClass('chosen').siblings('a').removeClass('chosen');
+          var url = $this.data('url');
+          $('#demo-frame').attr('src', url);
+          $('.demo-desc span').text( $this.data('desc') );
+          $('.demo-desc a').attr('href', url);
+        });
+      });
+    </script>
+
+
+</div> 
+
+ <div style="clear: both"></div>
+ <a href="#" data-role="button" data-mini="true"  data-inline="true" data-icon="gear" rel="external" onClick="GoApproveAll()" > Edit</a>
+<a href="#" data-role="button" data-mini="true"  data-inline="true" data-icon="gear" rel="external" onClick="GobenchMark()" > Neighborhood Trends</a>
+
+        
+    <div class="frame-border">
+      <iframe id="demo-frame" src="demo.htm">
+
+
+      </iframe>
+
+</div>
+    </div>
+
+    <!--div style="clear: both"></div-->
+ 
+
+</div>
+
+
+<div id="pageChat" data-role="page" data-add-back-btn="true" >
+<div data-role="header"> 
+	<h1>LiveChat</h1> 
+</div> 
+
+   <style>
+       .message {
+           padding: 5px 5px 5px 5px;
+       }
+       .username {
+           font-weight: strong;
+           color: #0f0;
+       }
+       .msgContainerDiv {
+           overflow-y: scroll;
+           height: 250px;
+       }
+   </style>
+
+    
+       <div data-role="content">
+       <div id="incomingMessages" name="incomingMessages" class="msgContainerDiv" ></div>
+       <label for="messageText"><strong>Message:</strong></label>
+       <textarea id="messageText"></textarea>
+
+       <fieldset class="ui-grid-a">
+           
+           <div class="ui-block-b"><button data-mini="true" data-theme="a" id="chatSendButton" name="chatSendButton">Send</input>
+       </fieldset>
+       </div>
+
+        <div id="pubnub" pub-key=demo sub-key=demo></div>
+   
+   <script src=http://cdn.pubnub.com/pubnub-3.1.min.js></script>
+   <script>$(document).ready(function(){
+
+       var chatName = ""
+       ,   channel  = "mobile-chat";
+
+       PUBNUB.subscribe({
+           
+         channel  : channel,
+           callback : function(message) {
+               alert(message.text);
+               
+               $("#incomingMessages").append(
+                   "<div class='message'><span class='username'>" +
+                   (message.chatName || 'Dad') +
+                   "</span> : " +
+                   (message.text || ' ') +
+                   "</div>"
+
+               );
+               $("#checkbox_approve").append('<input type="checkbox"  class="custom" id="newcb" data-theme="e" />');
+               $("#checkbox_approve").append('<label for="newcb">'+message.text || ' '+'</label>');
+               $("#checkbox_approve").trigger("create");
+               $("#checkbox_approve").trigger("refresh");
+               $("#incomingMessages").scrollTop(
+                   $("#incomingMessages")[0].scrollHeight
+               );
+           }
+       });
+
+       $("#chatNameButton").click(function(){
+           chatName = $("#chatNameText").val();
+           if(chatName.length <= 0) chatName = "unknown";
+           $(location).attr('href',"#chatPage");
+       });
+
+       $("#messageText").bind( 'keydown', function(e) {
+           if ((e.keyCode || e.charCode) !== 13) return true;
+           $("#chatSendButton").click();
+           return false;
+       });
+
+       $("#chatSendButton").click(function(){
+           PUBNUB.publish({
+               channel : channel,
+               message : {
+                    chatName : chatName,
+                    text     : $("#messageText").val()
+                }
+           });
+           $("#messageText").val("");
+       });
+
+   });</script>
+
+
+      
+   </div>
+ <div data-role="footer">
+           <h4>HomeWorks</h4>
+       </div>
+</div>
+
+<div id="pageBenchMark" data-role="page" data-add-back-btn="true" >
+<div data-role="header"> 
+  <h1>Neighborhood Trends</h1> 
+</div> 
+
+<div data-role="footer">
+           <h4>HomeWorks</h4>
+       </div>
+        <ul data-role="listview" data-inset="true"id="#suggestions1"   data-filter="true" data-filter-reveal="false" data-filter-placeholder="Questions" data-rel="back">
+          
+          <li data-theme="a" data-role="list-divider">Average Rewards</li>
+
+          <li><a onclick="GoPageChat()">
+            <img src="toilet.png" />
+            <h2>bathroom</h2>
+            <p>Average Reward- 250 pts</p></a>
+          </li>
+          <li><a onclick="GoPageChat()">
+            <img src="yard.png" />
+            <h2>Yard</h2>
+            <p>Average Reward- 250 pts</p></a>
+          </li>
+          <li><a onclick="GoPageChat()">
+            <img src="mow.png" />
+            <h2>Lawn</h2>
+            <p>Average Reward- 75pts</p></a>
+          </li>
+          <li><a onclick="GoPageChat()">
+            <img src="laundry.png" />
+            <h2>Laundry</h2>
+            <p>Average Reward- 100 pts</p></a>
+          </li>
+          <li><a onclick="GoPageChat()">
+            <img src="homework.png" />
+            <h2>HomeWork</h2>
+            <p>Average Reward- 25 pts</p></a>
+          </li>
+          <li><a onclick="GoPageChat()">
+            <img src="food.png" />
+            <h2>Food</h2>
+            <p>Average Reward- 20pts</p></a>
+          </li>
+          
+
+          <li data-theme="a" data-role="list-divider">Trending Rewards in my Neighborhood</li>
+          <li><a onclick="GoPageChat()">
+            
+            <h2>Katy Perry Live @ Three Stages Folsom 12/14 9pm </h2>
+            </a>
+          </li>
+          
+          <li><a onclick="GoPageChat()">
+            
+            <h2>Trip to the Zoo </h2>
+            </a>
+          </li>
+          
+          <li><a onclick="GoPageChat()">
+            
+            <h2>Movie </h2>
+            </a>
+          </li>
+          
+          <li><a onclick="GoPageChat()">
+            
+            <h2>Song Downloads </h2>
+            </a>
+          </li>
+          
+          <li><a onclick="GoPageChat()">
+            
+            <h2>New Clothes</h2>
+            </a>
+          </li>
+          
+
+
+        </ul>
+
+</div>
+
+
+</body>
+</html>
+
