@@ -3,10 +3,10 @@
 	<head>
 		<title> HomeHelp</title>
 		<script src="js/jquery.min.js"></script>
-		<script src="js/jquery-1.5.2.min.js"></script>
+		<script src="js/jquery-1.5.min.js"></script>
 		<script src="js/jquery.mobile-1.0a4.1.min.js"></script>
-		<script src="css/jqmdocs.css"></script>
-		<script src="css/jquery.mobile-1.1.1.min.css"></script>
+		<link rel="stylesheet" href="css/jqm-docs.css"></script>
+		<link rel="stylesheet" href="css/jquery.mobile-1.1.1.min.css"></script>
 
 		<link rel="stylesheet" href="css/jquery.mobile-1.0a4.1.min.css" />
 		<script  type="text/javascript">
@@ -67,7 +67,7 @@
 					<li  >
 						<a onclick="GoApproval()"	>
 						<div style="display:inline-block">
-						<img src="kid1.png" />
+						<img src="img/kid1.png" />
 						</div>
 						<div style="display:inline-block">
 							<h2>John</h2>
@@ -81,7 +81,7 @@
 					</li>
 					<li><a href="#">
 						<div style="display:inline-block">
-						<img src="girl2.jpeg" />
+						<img src="img/girl2.jpeg" />
 						</div>
 						<div style="display:inline-block">
 						<h2>Mary</h2>
@@ -98,7 +98,7 @@
           <li  >
             <a onclick="GoPageChoreList()" >
             <div style="display:inline-block">
-            <img src="kid1.png" />
+            <img src="img/kid1.png" />
             </div>
             <div style="display:inline-block">
               <h2>Randy</h2>
@@ -112,7 +112,7 @@
           </li>
           <li><a href="#">
             <div style="display:inline-block">
-            <img src="girl2.jpeg" />
+            <img src="img/girl2.jpeg" />
             </div>
             <div style="display:inline-block">
             <h2>Ryan</h2>
@@ -128,7 +128,7 @@
           <li  >
             <a onclick="GoPageChoreList()" >
             <div style="display:inline-block">
-            <img src="kid1.png" />
+            <img src="img/kid1.png" />
             </div>
             <div style="display:inline-block">
               <h2>Elle</h2>
@@ -142,7 +142,7 @@
           </li>
           <li><a href="#">
             <div style="display:inline-block">
-            <img src="girl2.jpeg" />
+            <img src="img/girl2.jpeg" />
             </div>
             <div style="display:inline-block">
             <h2>Rich</h2>
@@ -166,32 +166,32 @@
 </div> 
 				<ul data-role="listview" data-inset="true"id="#suggestions1"   data-filter="true" data-filter-reveal="false" data-filter-placeholder="Questions" data-rel="back">
 					<li><a onclick="GoPageChat()">
-						<img src="laundry.png" />
+						<img src="img/laundry.png" />
 						<h2>Laundry</h2>
 						<p>100 pts</p></a>
 					</li>
 					<li><a onclick="GoPageChat()">
-						<img src="homework.png" />
+						<img src="img/homework.png" />
 						<h2>HomeWork</h2>
 						<p>100 pts</p></a>
 					</li>
 					<li><a onclick="GoPageChat()">
-						<img src="food.png" />
+						<img src="img/food.png" />
 						<h2>Food</h2>
 						<p>50pts</p></a>
 					</li>
           <li><a onclick="GoPageChat()">
-            <img src="toilet.png" />
+            <img src="img/toilet.png" />
             <h2>bathroom</h2>
             <p>300 pts</p></a>
           </li>
           <li><a onclick="GoPageChat()">
-            <img src="yard.png" />
+            <img src="img/yard.png" />
             <h2>Yard</h2>
             <p>250 pts</p></a>
           </li>
           <li><a onclick="GoPageChat()">
-            <img src="mow.png" />
+            <img src="img/mow.png" />
             <h2>Lawn</h2>
             <p>100pts</p></a>
           </li>
@@ -341,9 +341,9 @@
      
     $("#toggle").click(function(){ 
    $("img").attr('src',  
-                ($("img").attr('src') == "active.png"  
-                    ? "disabled.png"  
-                    : "active.png" 
+                ($("img").attr('src') == "img/active.png"  
+                    ? "img/disabled.png"  
+                    : "img/active.png" 
                      ) 
                 )  
     }); 
@@ -428,7 +428,7 @@
 
         <div id="pubnub" pub-key=demo sub-key=demo></div>
    
-   <script src=http://cdn.pubnub.com/pubnub-3.1.min.js></script>
+   <script src="http://cdn.pubnub.com/pubnub-3.1.min.js"></script>
    <script>$(document).ready(function(){
 
        var chatName = ""
@@ -504,32 +504,32 @@
           <li data-theme="a" data-role="list-divider">Average Rewards</li>
 
           <li><a onclick="GoPageChat()">
-            <img src="toilet.png" />
+            <img src="img/toilet.png" />
             <h2>bathroom</h2>
             <p>Average Reward- 250 pts</p></a>
           </li>
           <li><a onclick="GoPageChat()">
-            <img src="yard.png" />
+            <img src="img/yard.png" />
             <h2>Yard</h2>
             <p>Average Reward- 250 pts</p></a>
           </li>
           <li><a onclick="GoPageChat()">
-            <img src="mow.png" />
+            <img src="img/mow.png" />
             <h2>Lawn</h2>
             <p>Average Reward- 75pts</p></a>
           </li>
           <li><a onclick="GoPageChat()">
-            <img src="laundry.png" />
+            <img src="img/laundry.png" />
             <h2>Laundry</h2>
             <p>Average Reward- 100 pts</p></a>
           </li>
           <li><a onclick="GoPageChat()">
-            <img src="homework.png" />
+            <img src="img/homework.png" />
             <h2>HomeWork</h2>
             <p>Average Reward- 25 pts</p></a>
           </li>
           <li><a onclick="GoPageChat()">
-            <img src="food.png" />
+            <img src="img/food.png" />
             <h2>Food</h2>
             <p>Average Reward- 20pts</p></a>
           </li>
